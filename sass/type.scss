@@ -1,6 +1,76 @@
 @import 'compass/css3';
 @import 'compass/utilities';
+@import 'compass/typography/vertical_rhythm';
 
+/* TYPOGRAPHY */
+/*-------------------------------------------------------*/
+
+body{
+p, h1 {font-kerning: initial;
+       text-rendering:optimizeLegibility;}
+  }
+
+
+.title_wrapper {
+
+.intro {
+
+  h1 {
+            display:block;
+            position:relative;
+            text-align:center;
+            font-family:$heading-font-family;
+            text-transform:uppercase;
+            color:$purple;
+            font-weight:400;
+            @include trailer;
+
+            span.the {
+                  clear:both;
+                  display:block;
+                  margin:0 auto;
+                  width:100%;
+                  position:relative;
+                  @include adjust-font-size-to($base-font-size * 2.618);
+                  color:$turquoise;
+                  font-family:$base-font-family;
+                  @include adjust-leading-to(1);
+            }
+            span.heightof {@include adjust-font-size-to($base-font-size*4.236);
+                           @include adjust-leading-to(0.6);
+                         font-weight:600;}
+            span.jackpots {@include adjust-font-size-to($base-font-size*6.4);
+                           @include adjust-leading-to(0.75);
+                           }
+
+          }
+
+  p {font-family: $base-font-family;
+    @extend %t-medium;
+    text-align:center;
+    padding-bottom:3em;
+    display:block;
+    color: desaturate($purple, 70%);}
+        }
+
+a.button {color:white;
+          @extend %t-medium;
+          text-transform:uppercase;
+          font-family:$heading-font-family;
+          font-weight:400;
+          text-decoration:none;}
+
+        }
+
+.ruler_wrapper {
+
+  .scrollup:before, .scrollup p {color:$purple;
+               text-align:center;
+               font-family:$heading-font-family;
+             text-transform:uppercase;}
+
+    .scrollup p {	@extend %t-medium;}
+    .scrollup:before{@extend %t-large;}
 
 .height_indicator .height { margin:0;
                           padding-left:1em;
@@ -12,7 +82,7 @@
                             @include transform(translateY(-50%));
 
                             p {font-family:$heading-font-family;
-                               color:$lightblue;
+                               color:white;
                                @extend %t-medium;
 
                             &:after {content:'m';}
@@ -31,7 +101,6 @@
             color:white;
             text-decoration:none;
             background:$purple;
-            z-index:7;
             @include border-radius(23px);
             @include transform(translateX(-50%));
              @include transition(all ease-in-out);
@@ -52,4 +121,5 @@
                                      color:$turquoise;
                                       font-family:$base-font-family;
                                       text-transform:uppercase;}
+}
 }
