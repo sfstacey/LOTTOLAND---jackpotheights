@@ -1,0 +1,376 @@
+@import 'compass/css3';
+@import 'compass/utilities';
+@import 'bourbon','neat';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css';
+/* ---------------------------------------------------------*/
+*, *:after, *:before {@include box-sizing(border-box);}
+
+$sectionHeight:1024px;
+$footerHeight:100px;
+
+html, body {position:relative;
+						height:100%;}
+
+body {background:#070231;} //Space Sky
+
+main {min-height:100%;
+			position:relative;
+			 height:auto !important;
+		 	 height:100%;
+		   margin:0 auto;
+			 overflow-x:hidden;
+		}
+
+		.container {display:block;
+						height:100%;
+						position:relative;
+						bottom:0;}
+
+.ruler_wrapper, .section_wrapper, .background_clouds, .cloud_wrapper_two, .background_textures {
+							 width:100%;
+							 display:block;}
+
+
+.background_textures, .background_clouds, .cloud_wrapper_two, .ruler_wrapper {
+						 position:absolute;
+						 bottom:0;
+						 height:100%;
+						 @include clearfix;}
+
+.background_textures {z-index:1;}
+.background_clouds {z-index:2;
+										@include opacity(0.5);}
+.cloud_wrapper_two {z-index:3;
+										@include opacity(0.75);}
+.section_wrapper {z-index:4;}
+.ruler_wrapper {z-index:6;}
+
+
+.ruler_wrapper {
+
+						 .tooltip {width:300px;
+					 						height:auto;
+					 						display:none;
+					 	          position:absolute;
+					 						z-index:800;
+					 						background:white;
+					 						@include border-radius(20px);
+
+											.tooltip-padding{padding:rhythm(1);
+																			 height:auto;}
+										}
+
+
+						 .container {min-height:100%;
+						 				margin-bottom:-$footerHeight;
+
+										&:after {content:'';
+														 display:block;}
+										&:after, footer {height:$footerHeight;}
+
+
+									footer {display:block;
+			 										position:fixed;
+			 										width:100%;
+			 										bottom:0;
+			 										background:white;
+													z-index:8 !important;
+
+											.footer_wrapper {@include outer-container();
+														 position:relative;
+														 	padding:rhythm(0.5);
+											.logo_col, .shareaholic-canvas {@include span-columns(1 of 2);
+														.logo{display:block;height:50px;width:150px;}
+														path#logo {fill:darken($sky, 30%);}
+													}
+													.shareaholic-canvas {height:50px;
+																	 border:1px solid red;}
+
+														}
+			 											}
+									}
+
+
+.ruler {background: transparent url('../img/svg/ruler.svg') left bottom repeat-y;
+				width:50px;
+				height:100%;
+				display:block;
+				position:absolute;
+				left:0;
+				bottom:0;}
+
+
+.coin_wrapper {
+						width:100%;
+						height:100%;
+						display:block;
+						position:absolute;
+						bottom:0;
+						right:0;
+
+						.coinpile {width:36px;
+										 	 position:absolute;
+										 	 bottom:0;
+										 	 display:block;
+											 background: transparent url('../img/coinpile.png') bottom repeat-y;
+											 z-index:6;
+
+											 &.flight {left:50%;
+																height: 7600px;
+																 @include transform(translateX(-50%));
+															 }
+
+											 &.nepal {right: 27%;
+																height: 6730px;}
+
+											 &.capetown {left: 27%;
+												 		height: 6050px;}
+
+											 &.dubai {right: 27%;
+												 				height: 5200px;}
+
+											 &.newyork {left: 27%;
+height: 4335px;}
+
+						&.paris {right:210px;
+												height:3000px;}
+
+						&.london {left:40%;
+											 height:2000px;}
+
+						&.rio {right:200px;
+									 height:600px;}
+					}
+				}
+	.height_indicator {
+						width:150px;
+						height:150px;
+						display:block;
+						position:fixed;
+						left:30px;
+						bottom:$sectionHeight/2;
+					}
+
+				}
+
+
+.section_wrapper{
+
+	svg {position:relative;
+			 display:block;}
+
+section{position:relative;
+			 	bottom:0;
+				left:0;
+				width:100%;
+				display:block;
+				height:$sectionHeight;
+				padding:1em 0 1em 0;
+				overflow:visible;
+
+				&#london, &#newyork{
+					.cloud {left:0;}
+				}
+
+				&#paris, &#dubai, &#nepal {
+					.cloud {right:0;}
+				}
+
+				.cloud{position:absolute;
+								 width:739.3px;
+								 height:900px;
+								 top:50%;
+								 z-index:4;
+								 @include transform(translateY(-50%));}
+
+
+
+				.cloud_left, .cloud_right {position:absolute;
+																	 width:100%;
+																	 bottom:0;
+																	  z-index:5 !important;}
+
+																		&#capetown {.cloud{height:590px;}
+																	}
+
+																		&#flight {
+
+																			 .plane {left:0;
+																			 				 width:200px;
+																						 	 height:96px;
+																						 	 position:absolute;
+																						 	 z-index:3;}
+																				.planetrail {right: 0;
+																										height: 9px;
+																										bottom: 18px;
+																										background: transparent url("../img/svg/planetrail.svg") center repeat-x;
+																										position: absolute;
+																										width: 90%;}
+
+																		.flightpath{
+																							width:150%;
+																							height:96px;
+																							display:block;
+																							position:absolute;
+																							top:50%;
+																							right:0;}
+
+																						}
+
+																		&#dubai{
+																						 .burj_khalifa {width:500px;
+																									 height:500px;
+																									 display:block;
+																									 position:absolute;
+																									 right: 30px;
+																								 bottom: 600px;
+																									z-index:3;
+
+																											svg {display:block;}
+
+																					 }
+																				 }
+
+					&#nepal {.everest {width: 650px;
+														 height: 500px;
+														 display: block;
+														 position: absolute;
+														 bottom: 50px;
+														 right: 0;
+													 }
+												 }
+					&#newyork {
+
+									 .empire_state {width:500px;
+									 			 height:500px;
+									 			 display:block;
+									 			 position:absolute;
+												 left: 0;
+											 bottom: 730px;
+									 			z-index:3;
+
+														svg {display:block;}
+											}
+
+
+								 }
+
+				&#paris {
+
+																	 .eiffel {width:500px;
+				 						 											height:500px;
+				 						 											display:block;
+				 						 											position:absolute;
+				 						 											right:0;
+				 																	 bottom:420px;
+																				 z-index:3;}
+
+																 }
+
+				&#london {
+
+													.hotel, .supports {width:500px;
+						 											height:500px;
+						 											display:block;
+						 											position:absolute;
+						 											left:0;}
+														.hotel{
+																	 bottom:240px;}
+														.supports{
+																			bottom:210px;
+																			z-index:3;}
+														.london_eye {position:absolute;
+																					width:730px;
+																					height:730px;
+																					display:block;
+																					bottom:270px;
+																				z-index:2;}
+
+											}
+
+				&#rio {overflow:hidden;
+
+										.redeemer {
+																	position:absolute;
+																	width:48.359375%;
+																	height:71.38671875%;
+																	display:block;
+																	bottom:0px;
+																	right:0;
+																	z-index:4;
+
+																	svg {bottom:-10px;
+																		 	 right:0;}
+																		 }
+
+									 .rio_trees {
+																	position:absolute;
+																	width:62.578125%;
+																	height:23.4375%;
+																	display:block;
+																	bottom:0px;
+																	right:1.5625%;
+																	z-index:5;
+
+																svg {bottom:-10px;
+																		 right:0;}
+																	 }
+																 }
+												}
+											}
+
+.background_textures {
+
+
+	.texture {position:absolute;
+						width:100%;
+						display:block;
+						@include opacity(0.5);
+						z-index:1 !important;
+
+						&.capetown, &.dubai, &.newyork, &.paris, &.london {path#Texture{fill: darken(rgb(12,156,238), 15%);}
+					}
+
+					&.euromillions {
+							bottom:10245px;
+								path#Texture{fill: darken(rgb(13,30,83), 18%);}
+					}
+
+					&.space {
+							bottom:9210px;
+								path#Texture{fill: darken(rgb(13,30,83), 15%);}
+					}
+
+						&.felix {
+								bottom:8280px;
+									path#Texture{fill: darken(rgb(13,30,83), 6%);}
+						}
+
+
+						&.flight {
+								bottom:7300px;
+									path#Texture{fill: darken(rgb(41,72,128), 10%);}
+						}
+
+						&.nepal {
+								bottom:6400px;
+									path#Texture{fill: darken(rgb(40,98,158), 10%);}
+						}
+
+						&.capetown {bottom:5500px;}
+
+						&.dubai {bottom:4500px;}
+
+					&.newyork {bottom:3440px;}
+
+					&.paris {bottom:2200px;}
+
+					&.london {bottom:1304px;}
+
+			&.rio {
+				bottom:-10px;
+			path#Texture{fill: lighten($sky, 30%);}
+	}
+
+}
+}

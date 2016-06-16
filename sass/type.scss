@@ -1,0 +1,55 @@
+@import 'compass/css3';
+@import 'compass/utilities';
+
+
+.height_indicator .height { margin:0;
+                          padding-left:1em;
+                          width:100%;
+                           position:absolute;
+                            text-align:center;
+                            display:block;
+                            top:50%;
+                            @include transform(translateY(-50%));
+
+                            p {font-family:$heading-font-family;
+                               color:$lightblue;
+                               @extend %t-medium;
+
+                            &:after {content:'m';}
+                             }
+
+                            }
+
+.coinpile a {display:block;
+            position:absolute;
+            top:-10px;
+            left:50%;
+            width:45px;
+            height:45px;
+            line-height:45px;
+            text-align:center;
+            color:white;
+            text-decoration:none;
+            background:$purple;
+            z-index:7;
+            @include border-radius(23px);
+            @include transform(translateX(-50%));
+             @include transition(all ease-in-out);
+
+              &:hover {@include rotate(15deg);
+                       @include transform(translateX(-50%));
+                       background:lighten($purple, 10%);
+                       @include transition(all ease-in-out);}
+          }
+
+.tooltip {
+
+  p.landmark_name {@extend %t-base;
+                   color:$purple;
+                    font-family:$heading-font-family;
+                    text-transform:uppercase;}
+                    p.landmark_cost {@extend %t-large;
+                                     color:$turquoise;
+                                      font-family:$base-font-family;
+                                      text-transform:uppercase;}
+}

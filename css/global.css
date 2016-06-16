@@ -1,0 +1,535 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Lato:400,700);
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* colours */
+/* type */
+/*customise type and sizes as required*/
+/*no need to edit beyond this line*/
+.tooltip p.landmark_name {
+  font-size: 1em;
+  line-height: 1.5em;
+  line-height: 1.5em; }
+
+.height_indicator .height p {
+  font-size: 1.3125em;
+  line-height: 2.28571em;
+  line-height: 1.71em; }
+
+.tooltip p.landmark_cost {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  line-height: 1.125em; }
+
+.t-tiny {
+  font-size: 0.5625em;
+  line-height: 2.66667em;
+  line-height: 3.999em; }
+
+.t-small {
+  font-size: 0.75em;
+  line-height: 2em;
+  line-height: 3em; }
+
+.t-base {
+  font-size: 1em;
+  line-height: 1.5em;
+  line-height: 1.5em; }
+
+.t-medium {
+  font-size: 1.3125em;
+  line-height: 2.28571em;
+  line-height: 1.71em; }
+
+.t-large {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  line-height: 1.125em; }
+
+.t-xlarge {
+  font-size: 2.375em;
+  line-height: 1.26316em;
+  line-height: 1.5em; }
+
+* html {
+  font-size: 100%; }
+
+html {
+  font-size: 16px;
+  line-height: 1.5em; }
+
+.height_indicator .height {
+  margin: 0;
+  padding-left: 1em;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .height_indicator .height p {
+    font-family: "Montserrat", "Lato", Tahoma, Verdana, Segoe, sans-serif;
+    color: #99d7fa; }
+    .height_indicator .height p:after {
+      content: 'm'; }
+
+.coinpile a {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background: #4014ba;
+  z-index: 7;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all ease-in-out;
+  -moz-transition: all ease-in-out;
+  -o-transition: all ease-in-out;
+  transition: all ease-in-out; }
+  .coinpile a:hover {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #511be6;
+    -webkit-transition: all ease-in-out;
+    -moz-transition: all ease-in-out;
+    -o-transition: all ease-in-out;
+    transition: all ease-in-out; }
+
+.tooltip p.landmark_name {
+  color: #4014ba;
+  font-family: "Montserrat", "Lato", Tahoma, Verdana, Segoe, sans-serif;
+  text-transform: uppercase; }
+.tooltip p.landmark_cost {
+  color: #36aeb1;
+  font-family: "Lato", Tahoma, Verdana, Segoe, sans-serif;
+  text-transform: uppercase; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ---------------------------------------------------------*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  position: relative;
+  height: 100%; }
+
+body {
+  background: #070231; }
+
+main {
+  min-height: 100%;
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden; }
+
+.container {
+  display: block;
+  height: 100%;
+  position: relative;
+  bottom: 0; }
+
+.ruler_wrapper, .section_wrapper, .background_clouds, .cloud_wrapper_two, .background_textures {
+  width: 100%;
+  display: block; }
+
+.background_textures, .background_clouds, .cloud_wrapper_two, .ruler_wrapper {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  *zoom: 1; }
+  .background_textures:before, .background_textures:after, .background_clouds:before, .background_clouds:after, .cloud_wrapper_two:before, .cloud_wrapper_two:after, .ruler_wrapper:before, .ruler_wrapper:after {
+    content: " ";
+    display: table; }
+  .background_textures:after, .background_clouds:after, .cloud_wrapper_two:after, .ruler_wrapper:after {
+    clear: both; }
+
+.background_textures {
+  z-index: 1; }
+
+.background_clouds {
+  z-index: 2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5; }
+
+.cloud_wrapper_two {
+  z-index: 3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75; }
+
+.section_wrapper {
+  z-index: 4; }
+
+.ruler_wrapper {
+  z-index: 6; }
+
+.ruler_wrapper .tooltip {
+  width: 300px;
+  height: auto;
+  display: none;
+  position: absolute;
+  z-index: 800;
+  background: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }
+  .ruler_wrapper .tooltip .tooltip-padding {
+    padding: 1.5em;
+    height: auto; }
+.ruler_wrapper .container {
+  min-height: 100%;
+  margin-bottom: -100px; }
+  .ruler_wrapper .container:after {
+    content: '';
+    display: block; }
+  .ruler_wrapper .container:after, .ruler_wrapper .container footer {
+    height: 100px; }
+  .ruler_wrapper .container footer {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: white;
+    z-index: 8 !important; }
+    .ruler_wrapper .container footer .footer_wrapper {
+      *zoom: 1;
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      padding: 0.75em; }
+      .ruler_wrapper .container footer .footer_wrapper:before, .ruler_wrapper .container footer .footer_wrapper:after {
+        content: " ";
+        display: table; }
+      .ruler_wrapper .container footer .footer_wrapper:after {
+        clear: both; }
+      .ruler_wrapper .container footer .footer_wrapper .logo_col, .ruler_wrapper .container footer .footer_wrapper .shareaholic-canvas {
+        display: block;
+        float: left;
+        margin-right: 16.03631%;
+        width: 41.98184%; }
+        .ruler_wrapper .container footer .footer_wrapper .logo_col:last-child, .ruler_wrapper .container footer .footer_wrapper .shareaholic-canvas:last-child {
+          margin-right: 0; }
+        .ruler_wrapper .container footer .footer_wrapper .logo_col .logo, .ruler_wrapper .container footer .footer_wrapper .shareaholic-canvas .logo {
+          display: block;
+          height: 50px;
+          width: 150px; }
+        .ruler_wrapper .container footer .footer_wrapper .logo_col path#logo, .ruler_wrapper .container footer .footer_wrapper .shareaholic-canvas path#logo {
+          fill: #053d5c; }
+      .ruler_wrapper .container footer .footer_wrapper .shareaholic-canvas {
+        height: 50px;
+        border: 1px solid red; }
+.ruler_wrapper .ruler {
+  background: transparent url("../img/svg/ruler.svg") left bottom repeat-y;
+  width: 50px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+.ruler_wrapper .coin_wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .ruler_wrapper .coin_wrapper .coinpile {
+    width: 36px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background: transparent url("../img/coinpile.png") bottom repeat-y;
+    z-index: 6; }
+    .ruler_wrapper .coin_wrapper .coinpile.flight {
+      left: 50%;
+      height: 7600px;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    .ruler_wrapper .coin_wrapper .coinpile.nepal {
+      right: 27%;
+      height: 6730px; }
+    .ruler_wrapper .coin_wrapper .coinpile.capetown {
+      left: 27%;
+      height: 6050px; }
+    .ruler_wrapper .coin_wrapper .coinpile.dubai {
+      right: 27%;
+      height: 5200px; }
+    .ruler_wrapper .coin_wrapper .coinpile.newyork {
+      left: 27%;
+      height: 4335px; }
+    .ruler_wrapper .coin_wrapper .coinpile.paris {
+      right: 210px;
+      height: 3000px; }
+    .ruler_wrapper .coin_wrapper .coinpile.london {
+      left: 40%;
+      height: 2000px; }
+    .ruler_wrapper .coin_wrapper .coinpile.rio {
+      right: 200px;
+      height: 600px; }
+.ruler_wrapper .height_indicator {
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: fixed;
+  left: 30px;
+  bottom: 512px; }
+
+.section_wrapper svg {
+  position: relative;
+  display: block; }
+.section_wrapper section {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 1024px;
+  padding: 1em 0 1em 0;
+  overflow: visible; }
+  .section_wrapper section#london .cloud, .section_wrapper section#newyork .cloud {
+    left: 0; }
+  .section_wrapper section#paris .cloud, .section_wrapper section#dubai .cloud, .section_wrapper section#nepal .cloud {
+    right: 0; }
+  .section_wrapper section .cloud {
+    position: absolute;
+    width: 739.3px;
+    height: 900px;
+    top: 50%;
+    z-index: 4;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .section_wrapper section .cloud_left, .section_wrapper section .cloud_right {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 5 !important; }
+  .section_wrapper section#capetown .cloud {
+    height: 590px; }
+  .section_wrapper section#flight .plane {
+    left: 0;
+    width: 200px;
+    height: 96px;
+    position: absolute;
+    z-index: 3; }
+  .section_wrapper section#flight .planetrail {
+    right: 0;
+    height: 9px;
+    bottom: 18px;
+    background: transparent url("../img/svg/planetrail.svg") center repeat-x;
+    position: absolute;
+    width: 90%; }
+  .section_wrapper section#flight .flightpath {
+    width: 150%;
+    height: 96px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0; }
+  .section_wrapper section#dubai .burj_khalifa {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 600px;
+    z-index: 3; }
+    .section_wrapper section#dubai .burj_khalifa svg {
+      display: block; }
+  .section_wrapper section#nepal .everest {
+    width: 650px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 0; }
+  .section_wrapper section#newyork .empire_state {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 730px;
+    z-index: 3; }
+    .section_wrapper section#newyork .empire_state svg {
+      display: block; }
+  .section_wrapper section#paris .eiffel {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 420px;
+    z-index: 3; }
+  .section_wrapper section#london .hotel, .section_wrapper section#london .supports {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    left: 0; }
+  .section_wrapper section#london .hotel {
+    bottom: 240px; }
+  .section_wrapper section#london .supports {
+    bottom: 210px;
+    z-index: 3; }
+  .section_wrapper section#london .london_eye {
+    position: absolute;
+    width: 730px;
+    height: 730px;
+    display: block;
+    bottom: 270px;
+    z-index: 2; }
+  .section_wrapper section#rio {
+    overflow: hidden; }
+    .section_wrapper section#rio .redeemer {
+      position: absolute;
+      width: 48.359375%;
+      height: 71.38671875%;
+      display: block;
+      bottom: 0px;
+      right: 0;
+      z-index: 4; }
+      .section_wrapper section#rio .redeemer svg {
+        bottom: -10px;
+        right: 0; }
+    .section_wrapper section#rio .rio_trees {
+      position: absolute;
+      width: 62.578125%;
+      height: 23.4375%;
+      display: block;
+      bottom: 0px;
+      right: 1.5625%;
+      z-index: 5; }
+      .section_wrapper section#rio .rio_trees svg {
+        bottom: -10px;
+        right: 0; }
+
+.background_textures .texture {
+  position: absolute;
+  width: 100%;
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  z-index: 1 !important; }
+  .background_textures .texture.capetown path#Texture, .background_textures .texture.dubai path#Texture, .background_textures .texture.newyork path#Texture, .background_textures .texture.paris path#Texture, .background_textures .texture.london path#Texture {
+    fill: #086ca5; }
+  .background_textures .texture.euromillions {
+    bottom: 10245px; }
+    .background_textures .texture.euromillions path#Texture {
+      fill: #010104; }
+  .background_textures .texture.space {
+    bottom: 9210px; }
+    .background_textures .texture.space path#Texture {
+      fill: #030611; }
+  .background_textures .texture.felix {
+    bottom: 8280px; }
+    .background_textures .texture.felix path#Texture {
+      fill: #091439; }
+  .background_textures .texture.flight {
+    bottom: 7300px; }
+    .background_textures .texture.flight path#Texture {
+      fill: #1d3259; }
+  .background_textures .texture.nepal {
+    bottom: 6400px; }
+    .background_textures .texture.nepal path#Texture {
+      fill: #1e4975; }
+  .background_textures .texture.capetown {
+    bottom: 5500px; }
+  .background_textures .texture.dubai {
+    bottom: 4500px; }
+  .background_textures .texture.newyork {
+    bottom: 3440px; }
+  .background_textures .texture.paris {
+    bottom: 2200px; }
+  .background_textures .texture.london {
+    bottom: 1304px; }
+  .background_textures .texture.rio {
+    bottom: -10px; }
+    .background_textures .texture.rio path#Texture {
+      fill: #99d7fa; }

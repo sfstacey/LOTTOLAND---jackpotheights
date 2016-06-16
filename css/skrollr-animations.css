@@ -1,0 +1,89 @@
+body {
+  -skrollr-animation-name: skycolours; }
+
+@-skrollr-keyframes skycolours {
+  1759-bottom {
+    background-color: #b4d9ed; }
+
+  570-bottom {
+    background-color: #0c9cee; } }
+
+.littlecloud.cloudone {
+  -skrollr-animation-name: parallaxone; }
+
+.littlecloud.cloudtwo, .coinpile {
+  -skrollr-animation-name: parallaxtwo; }
+
+#rio .clouds {
+  -skrollr-animation-name: rio_parallax_one; }
+#rio .rio_trees {
+  -skrollr-animation-name: rio_parallax_three; }
+
+#london .london_eye {
+  -skrollr-animation-name: london_eye_spin; }
+
+@-skrollr-keyframes rio_parallax_three {
+  end {
+    margin-bottom: 0px; }
+
+  start {
+    margin-bottom: -600px; } }
+
+@-skrollr-keyframes rio_parallax_one {
+  end {
+    margin-bottom: 0px; }
+
+  start {
+    margin-bottom: 600px; } }
+
+@-skrollr-keyframes parallaxone {
+  end {
+    margin-top: 0px; }
+
+  start {
+    margin-top: 600px; } }
+
+@-skrollr-keyframes parallaxtwo {
+  end {
+    margin-top: 0px; }
+
+  start {
+    margin-top: -400px; } }
+
+@-skrollr-keyframes parallaxthree {
+  end {
+    margin-top: 0px; }
+
+  start {
+    margin-top: -600px; } }
+
+@-skrollr-keyframes london_eye_spin {
+  36-end {
+    transform: rotate(0deg); }
+
+  1536-bottom {
+    transform: rotate(360deg); } }
+
+.coinpile {
+  @-skrollr-keyframes pariscoins {
+    999-end {
+      display: none;
+      height: 0; }
+
+    1759-bottom {
+      display: block;
+      height: 3045px; } }
+
+  @-skrollr-keyframes londoncoins {
+    280-end {
+      display: none;
+      height: 0; }
+
+    725-bottom {
+      display: block;
+      height: 2051px; } }
+ }
+  .coinpile.section2 {
+    -skrollr-animation-name: pariscoins; }
+  .coinpile.section1 {
+    -skrollr-animation-name: londoncoins; }
