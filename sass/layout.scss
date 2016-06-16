@@ -78,13 +78,34 @@ main {min-height:100%;
 
 											.footer_wrapper {@include outer-container();
 														 position:relative;
-														 	padding:rhythm(0.5);
-											.logo_col, .shareaholic-canvas {@include span-columns(1 of 2);
+														 	padding:rhythm(1);
+											.logo_col, .social {@include span-columns(1 of 2);
 														.logo{display:block;height:50px;width:150px;}
 														path#logo {fill:darken($sky, 30%);}
 													}
-													.shareaholic-canvas {height:50px;
-																	 border:1px solid red;}
+													.social {height:50px;
+
+
+														ul.share-buttons{
+															$socialbuttonsize:40px;
+															@include outer-container();
+  														list-style: none;
+  														padding: 0;
+
+															li {@include span-columns(1 of 5);
+																a, img {width:$socialbuttonsize;}
+
+																a {position:relative;
+																	display:block;
+																	margin:0 auto;
+
+																	img {display:block;
+																		 	 height:$socialbuttonsize;}
+																}
+																}
+																}
+
+													}
 
 														}
 			 											}

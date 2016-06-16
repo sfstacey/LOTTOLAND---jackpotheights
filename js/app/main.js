@@ -1,4 +1,4 @@
-require(['jquery','waypoints'], function(){
+require(['jquery'], function(){
 (function($){
   "use strict"
 
@@ -50,14 +50,15 @@ require(['jquery','waypoints'], function(){
       loadAnimations(ScrollMagic, $animation_controller);
       });
 
+      require(['waypoints'],function(){
       for(var i=0; i< $('body').find('section').length; i++){
         //get section id
         var $sectionID = $('section')[i].id;
-        var $sectionIndex = $('section')[i].className.replace('section', '');
-
+        var $sectionIndex = $('section')[i].className.replace('section', '')
         //make a waypoint for each section
         makeWaypoint($sectionID, $sectionIndex, $landmarks);
         }
+      });
 
       //tooltips
       $coinpilelink.on('mouseover', function(){
@@ -80,7 +81,6 @@ require(['jquery','waypoints'], function(){
 
 
       preloadArtwork($imgpath);
-      getShareButtons();
 
   });
 })(jQuery);
@@ -149,10 +149,3 @@ function makeWaypoint($sectionID, $sectionIndex, $landmarks){
     },
   });
 };
-
-function getShareButtons(){
-  require(['sharebuttons'], function(){
-  var switchTo5x = true;
-  stLight.options({publisher: 'd33bc5aa-2369-4e92-9eb3-7a8fc0d875db', doNotHash: true, doNotCopy: true, hashAddressBar: false});
-  });
-}
