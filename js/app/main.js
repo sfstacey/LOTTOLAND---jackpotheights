@@ -62,9 +62,9 @@ require(['jquery'], function(){
 
       //tooltips
       $coinpilelink.on('mouseover', function(){
-     var $position = parseInt($(this).parent().index());
-    $('.tooltip').find('p.landmark_name').html($landmarks.landmark[$position].name);
-    $('.tooltip').find('p.landmark_cost').html($landmarks.landmark[$position].cost);
+     var $section_position = parseInt($(this).parent().index());
+    $('.tooltip').find('p.landmark_name').html($landmarks.landmark[$section_position].name);
+    $('.tooltip').find('p.landmark_cost').html($landmarks.landmark[$section_position].cost);
      $('.tooltip').show();
 
       }).mousemove(function(ev){
@@ -147,5 +147,6 @@ function makeWaypoint($sectionID, $sectionIndex, $landmarks){
     handler:function(){
       $('.height_indicator .height p').html($landmarks.landmark[$sectionIndex].height);
     },
+    offset:500
   });
 };
