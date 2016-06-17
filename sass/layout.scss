@@ -200,6 +200,14 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
             bottom:0;
             display:block;
             background: transparent url('../img/coinpile.png') bottom repeat-y;
+
+            &.felix
+            {
+                left:50%;
+                height: 8680px;
+                @include transform(translateX(-50%));
+            }
+
             &.flight
             {
                 left:50%;
@@ -369,8 +377,100 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
                 }
             }
         }
+
+        .bufferdiv{display:block;
+                   height:50px;}
+
         section
         {
+
+          &#space
+          {
+
+            .planetshadow {display:block;
+              position:absolute;
+              top:0;
+              right:0;
+              svg {width:100%;
+                   height:100%;
+                   display:block;}
+                 }
+
+            .little_planet_blue, .little_planet_green {
+            top:50%;
+            width:200px;
+            height:200px;
+            z-index:4;
+            position:absolute;
+            @include border-radius(100px);
+            @include transform(translateY(-50%));
+            overflow:hidden;
+
+            .planetshadow {width:90px;
+                            height:200px;
+                            right:0;}
+
+            }
+
+            .little_planet_blue {
+              left:20%;
+              background-color: #00ABF1;
+              background-image: url('../img/svg/blueplanet.svg');
+
+              .planetshadow svg path {fill: darken(#00ABF1, 20%);
+                                      @include opacity(0.75);}
+
+
+            }
+
+            .little_planet_green {
+              right:20%;
+              background-color: #7EB974;
+              background-image: url('../img/svg/greenplanet.svg');
+
+              .planetshadow svg path {fill: darken(#7EB974, 20%);
+                                      @include opacity(0.75);}
+
+            }
+
+            .big_planet
+            {left:50%;
+             top:50%;
+             width:300px;
+             height:300px;
+             z-index:4;
+             position:absolute;
+             background-color:#4014BA;
+             display:block;
+             background-image: url('../img/svg/purpleplanet.svg');
+             @include border-radius(150px);
+             @include transform(translateX(-50%));
+
+             .planetshadow {width: 130px;
+                            height: 300px;
+                            right:0;
+                        svg path {fill: darken(#4014BA, 20%);
+                                     @include opacity(0.75);}
+                                   }
+
+            }
+          }
+
+            &#felix
+            {
+
+              .felixart
+              {left:50%;
+               bottom:0%;
+              z-index:4;
+               width:250px;
+               height:250px;
+               position:absolute;
+               @include transform(translateX(-50%));
+              }
+            }
+
+
             &#flight
             {
                 .plane
@@ -547,7 +647,6 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
         width:100%;
         display:block;
         @include opacity(0.5);
-        z-index:1 !important;
         &.capetown, &.dubai, &.newyork, &.paris, &.london
         {
             path#Texture
@@ -574,6 +673,7 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
         &.felix
         {
             bottom:8280px;
+            z-index:1;
             path#Texture
             {
                 fill: darken(rgb(13,30,83), 6%);
