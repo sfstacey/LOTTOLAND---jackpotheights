@@ -201,6 +201,13 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
             display:block;
             background: transparent url('../img/coinpile.png') bottom repeat-y;
 
+            &.space
+            {
+                right:60%;
+                height: 9550px;
+                @include transform(translateX(-50%));
+            }
+
             &.felix
             {
                 left:50%;
@@ -336,6 +343,7 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
 
 				section
         {
+
             &#london, &#newyork
             {
                 .cloud
@@ -362,7 +370,7 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
                 @include transform(translateY(-50%));
             }
 
-            .cloud_left, .cloud_right
+            .bigcloud.left, .bigcloud.right
             {
                 position:absolute;
                 width:100%;
@@ -383,6 +391,34 @@ footer, .coinpile a, .height_indicator {z-index:100 !important;}
 
         section
         {
+
+
+          &#euromillions {
+
+            .euro_coins {width:100%;
+                         height:100%;
+                         position:absolute;
+                         top:0;
+                         left:0;
+                         display:block;
+                         z-index:5;}
+
+            .tickets {width:100%;
+                         height:100%;
+                         position:absolute;
+                         top:0;
+                         left:0;
+                         display:block;
+                         z-index:4;}
+
+                         .tickets, .euro_coins{
+
+                       svg {position:relative;
+                            display:block;
+                            width:100%;
+                            height:100%;}
+                     }
+          }
 
           &#space
           {

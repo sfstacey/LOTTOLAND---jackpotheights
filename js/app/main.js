@@ -116,8 +116,10 @@ $('section#capetown .table_mountain').load($imgpath+'capetown_tablemountain.svg'
 $('section#nepal .everest').load($imgpath+'nepal_everest.svg');
 $('section#flight .plane').load($imgpath+'plane.svg');
 $('section#felix .felixart').load($imgpath+'felix.svg');
-$('.cloud_left').load($imgpath+'cloud_left.svg');
-$('.cloud_right').load($imgpath+'cloud_right.svg');
+$('section#euromillions .euro_coins').load($imgpath+'euro_coins.svg');
+$('section#euromillions .tickets').load($imgpath+'tickets.svg');
+$('.bigcloud.left').load($imgpath+'bigcloud_left.svg');
+$('.bigcloud.right').load($imgpath+'bigcloud_right.svg');
 $('.texture').load($imgpath+'texture.svg');
 $('.planetshadow').load($imgpath+'planet_shadow.svg');
 
@@ -142,14 +144,16 @@ var normal_sky = new ScrollMagic.Scene({triggerElement:'#dubai', duration:4100})
 
 var rio_sky = new ScrollMagic.Scene({triggerElement:'#rio', duration:960}).setTween(TweenMax.to("body",1, {'background-color':'rgb(180,217,237)'})).addTo($animation_controller);
 
+//coin depth
+var coins = new ScrollMagic.Scene({triggerElement:'#euromillions', duration:800, offset:200}).setTween(TweenMax.to(".euro_coins",1, {'top':'200px', ease:Linear.easeNone})).addTo($animation_controller).addIndicators();
 
 //planet depth
-var blueplanet = new ScrollMagic.Scene({triggerElement:'#space', duration:3000}).setTween(TweenMax.to(".little_planet_blue",1, {'top':'300px', ease:Linear.easeNone})).addTo($animation_controller);
+var blueplanet = new ScrollMagic.Scene({triggerElement:'#space', duration:1000}).setTween(TweenMax.to(".little_planet_blue",1, {'bottom':'500px', ease:Linear.easeNone})).addTo($animation_controller);
 
-var greenplanet = new ScrollMagic.Scene({triggerElement:'#space', duration:3000}).setTween(TweenMax.to(".little_planet_green",1, {'top':'600px', ease:Linear.easeNone})).addTo($animation_controller);
+var greenplanet = new ScrollMagic.Scene({triggerElement:'#space', duration:1000}).setTween(TweenMax.to(".little_planet_green",1, {'top':'500px', ease:Linear.easeNone})).addTo($animation_controller);
 
 //spinning planets
-var planetspin = new ScrollMagic.Scene({triggerElement:'#space', duration:3000}).setTween(TweenMax.to(".planet",1, {backgroundPosition:'-50% 0', ease:Linear.easeNone})).addTo($animation_controller).addIndicators();
+var planetspin = new ScrollMagic.Scene({triggerElement:'#space', duration:3000}).setTween(TweenMax.to(".planet",1, {backgroundPosition:'-100% 0', ease:Linear.easeNone})).addTo($animation_controller);
 
 //felix jump
 var felixjump = new ScrollMagic.Scene({triggerElement:'#felix', duration:1300}).setTween(TweenMax.to(".felixart",1, {'bottom': '150%', 'opacity': '1'})).addTo($animation_controller);
@@ -162,7 +166,8 @@ var airplane = new ScrollMagic.Scene({triggerElement:'#flight', duration:1300}).
 var london_eye_spin = new ScrollMagic.Scene({triggerElement:'#london', offset:-500,  duration:1850}).setTween(TweenMax.to(".london_eye",1, {rotation:100})).addTo($animation_controller);
 
 //coinpiles
-var felix_coinpile = new ScrollMagic.Scene({triggerElement:'#felix', offset:600, duration:3000}).setTween(TweenMax.to(".coinpile.felix",1,{'display':'none', 'height':'0'})).addTo($animation_controller)
+var space_coinpile = new ScrollMagic.Scene({triggerElement:'#space', offset:600, duration:6000}).setTween(TweenMax.to(".coinpile.space",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
+var felix_coinpile = new ScrollMagic.Scene({triggerElement:'#felix', offset:600, duration:3000}).setTween(TweenMax.to(".coinpile.felix",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var flight_coinpile = new ScrollMagic.Scene({triggerElement:'#flight', offset:410, duration:3000}).setTween(TweenMax.to(".coinpile.flight",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var nepal_coinpile = new ScrollMagic.Scene({triggerElement:'#nepal', offset:410, duration:3000}).setTween(TweenMax.to(".coinpile.nepal",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var capetown_coinpile = new ScrollMagic.Scene({triggerElement:'#capetown', offset:410, duration:3000}).setTween(TweenMax.to(".coinpile.capetown",1,{'display':'none', 'height':'0'})).addTo($animation_controller)
@@ -179,12 +184,9 @@ function makeWaypoint($sectionID, $sectionIndex, $landmarks){
   var waypoint = new Waypoint({
     element:document.getElementById($sectionID),
     handler:function(direction){
-      console.log($sectionID);
-      console.log($sectionIndex);
      if (direction === 'up'){
       $('.height_indicator .height p').html($landmarks.landmark[$sectionIndex].height);
     }
     },
-    offset:100
   });
 };

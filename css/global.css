@@ -385,6 +385,14 @@ footer, .coinpile a, .height_indicator {
   bottom: 0;
   display: block;
   background: transparent url("../img/coinpile.png") bottom repeat-y; }
+.ruler_wrapper .container .coin_wrapper .coinpile.space {
+  right: 60%;
+  height: 9550px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
 .ruler_wrapper .container .coin_wrapper .coinpile.felix {
   left: 50%;
   height: 8680px;
@@ -523,7 +531,7 @@ footer, .coinpile a, .height_indicator {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
-.section_wrapper section .cloud_left, .section_wrapper section .cloud_right {
+.section_wrapper section .bigcloud.left, .section_wrapper section .bigcloud.right {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -533,6 +541,27 @@ footer, .coinpile a, .height_indicator {
 .section_wrapper .bufferdiv {
   display: block;
   height: 50px; }
+.section_wrapper section#euromillions .euro_coins {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 5; }
+.section_wrapper section#euromillions .tickets {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 4; }
+.section_wrapper section#euromillions .tickets svg, .section_wrapper section#euromillions .euro_coins svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%; }
 .section_wrapper section#space .planetshadow {
   display: block;
   position: absolute;
