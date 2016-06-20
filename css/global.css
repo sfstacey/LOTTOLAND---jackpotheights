@@ -385,6 +385,14 @@ footer, .coinpile a, .height_indicator {
   bottom: 0;
   display: block;
   background: transparent url("../img/coinpile.png") bottom repeat-y; }
+.ruler_wrapper .container .coin_wrapper .coinpile.euromillions {
+  right: 50%;
+  height: 10640px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
 .ruler_wrapper .container .coin_wrapper .coinpile.space {
   right: 60%;
   height: 9550px;

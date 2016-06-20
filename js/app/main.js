@@ -1,4 +1,9 @@
 require(['jquery'], function(){
+
+  require(["ga"], function(ga) {
+      ga("send", "pageview");
+  });
+
 (function($){
   "use strict"
 
@@ -46,7 +51,7 @@ require(['jquery'], function(){
       }
 
 
-      require(['ScrollMagic', 'debugScrollMagic', 'TweenMax', 'animationgsap'],function(ScrollMagic){
+      require(['ScrollMagic', 'TweenMax', 'animationgsap'],function(ScrollMagic){
       var $animation_controller =  new ScrollMagic.Controller();
       loadAnimations(ScrollMagic, $animation_controller);
       });
@@ -145,7 +150,7 @@ var normal_sky = new ScrollMagic.Scene({triggerElement:'#dubai', duration:4100})
 var rio_sky = new ScrollMagic.Scene({triggerElement:'#rio', duration:960}).setTween(TweenMax.to("body",1, {'background-color':'rgb(180,217,237)'})).addTo($animation_controller);
 
 //coin depth
-var coins = new ScrollMagic.Scene({triggerElement:'#euromillions', duration:800, offset:200}).setTween(TweenMax.to(".euro_coins",1, {'top':'200px', ease:Linear.easeNone})).addTo($animation_controller).addIndicators();
+var coins = new ScrollMagic.Scene({triggerElement:'#euromillions', duration:800, offset:200}).setTween(TweenMax.to(".euro_coins",1, {'top':'200px', ease:Linear.easeNone})).addTo($animation_controller);
 
 //planet depth
 var blueplanet = new ScrollMagic.Scene({triggerElement:'#space', duration:1000}).setTween(TweenMax.to(".little_planet_blue",1, {'bottom':'500px', ease:Linear.easeNone})).addTo($animation_controller);
@@ -166,6 +171,7 @@ var airplane = new ScrollMagic.Scene({triggerElement:'#flight', duration:1300}).
 var london_eye_spin = new ScrollMagic.Scene({triggerElement:'#london', offset:-500,  duration:1850}).setTween(TweenMax.to(".london_eye",1, {rotation:100})).addTo($animation_controller);
 
 //coinpiles
+var euromillions_coinpile = new ScrollMagic.Scene({triggerElement:'#euromillions', offset:600, duration:6000}).setTween(TweenMax.to(".coinpile.euromillions",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var space_coinpile = new ScrollMagic.Scene({triggerElement:'#space', offset:600, duration:6000}).setTween(TweenMax.to(".coinpile.space",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var felix_coinpile = new ScrollMagic.Scene({triggerElement:'#felix', offset:600, duration:3000}).setTween(TweenMax.to(".coinpile.felix",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
 var flight_coinpile = new ScrollMagic.Scene({triggerElement:'#flight', offset:410, duration:3000}).setTween(TweenMax.to(".coinpile.flight",1,{'display':'none', 'height':'0'})).addTo($animation_controller);
